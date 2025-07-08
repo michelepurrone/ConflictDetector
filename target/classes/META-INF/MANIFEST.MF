@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1726420365062
+Build-Jdk: 11.0.19
+Built-By: michele
+Bundle-Description: ONOS OSGi bundle archetype
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: ConflictDetector
+Bundle-SymbolicName: ConflictDetector.ConflictDetector
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.conflictdetector.app;uses:="org.onosproject.cfg,org.
+ onosproject.core,org.onosproject.net.device,org.onosproject.net.flow,or
+ g.osgi.service.component";version="1.0.0"
+Import-Package: org.onlab.util;version="[2.6,3)",org.onosproject.cfg;ver
+ sion="[2.6,3)",org.onosproject.core;version="[2.6,3)",org.onosproject.n
+ et;version="[2.6,3)",org.onosproject.net.device;version="[2.6,3)",org.o
+ nosproject.net.flow;version="[2.6,3)",org.onosproject.net.flow.criteria
+ ;version="[2.6,3)",org.onosproject.net.flow.instructions;version="[2.6,
+ 3)",org.osgi.service.component;version="[1.4,2)",org.slf4j;version="[1.
+ 7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="org.conflictd
+ etector.app.SomeInterface"
+Require-Capability: osgi.service;filter:="(objectClass=org.onosproject.c
+ fg.ComponentConfigService)";effective:=active,osgi.service;filter:="(ob
+ jectClass=org.onosproject.core.CoreService)";effective:=active,osgi.ser
+ vice;filter:="(objectClass=org.onosproject.net.device.DeviceService)";e
+ ffective:=active,osgi.service;filter:="(objectClass=org.onosproject.net
+ .flow.FlowRuleService)";effective:=active,osgi.extender;filter:="(&(osg
+ i.extender=osgi.component)(version>=1.4.0)(!(version>=2.0.0)))",osgi.ee
+ ;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Service-Component: OSGI-INF/org.conflictdetector.app.AppComponent.xml
+Tool: Bnd-4.1.0.201810181252
