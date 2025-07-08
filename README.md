@@ -1,4 +1,4 @@
-# ConflictDetector
+# Conflict Detector
 
 Progetto realizzato durante il corso "Network Security".
 
